@@ -152,3 +152,12 @@
 2018-07-14T02:09:46.783-0400 I STORAGE  [conn11] createCollection: BINA.users with generated UUID: df586f0b-b839-4f32-9b42-6d9033cf84b0
 2018-07-14T02:09:46.966-0400 I COMMAND  [conn11] command BINA.users command: insert { insert: "users", ordered: true, lsid: { id: UUID("1f57d1fa-1a8a-45a3-a58d-87947280c719") }, $db: "BINA" } ninserted:1 keysInserted:1 numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 2, W: 1 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_query 207ms
 2018-07-14T02:20:23.126-0400 I NETWORK  [conn11] end connection 127.0.0.1:59721 (1 connection now open)
+2018-07-14T02:26:16.887-0400 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2018-07-14T02:26:16.897-0400 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-07-14T02:26:16.901-0400 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-07-14T02:26:16.910-0400 I CONTROL  [signalProcessingThread] Shutting down free monitoring
+2018-07-14T02:26:16.911-0400 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2018-07-14T02:26:16.922-0400 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2018-07-14T02:26:17.129-0400 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2018-07-14T02:26:17.144-0400 I CONTROL  [signalProcessingThread] now exiting
+2018-07-14T02:26:17.145-0400 I CONTROL  [signalProcessingThread] shutting down with code:0
