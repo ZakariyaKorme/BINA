@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { tokenNotExpired } from 'angular2-jwt';
 
+const url = 'http://localhost:3000/'
+
 @Injectable()
 export class AuthService {
   authToken: any;
@@ -11,19 +13,19 @@ export class AuthService {
 
   constructor(private http: Http) {
 
-      }
+  }
 
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('users/register', user, {headers: headers})
+    return this.http.post(url + 'users/register', user, {headers: headers})
       .map(res => res.json());
   }
 
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('users/authenticate', user, {headers: headers})
+    return this.http.post(url + 'users/authenticate', user, {headers: headers})
       .map(res => res.json());
   }
 
@@ -32,7 +34,7 @@ export class AuthService {
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('users/profile', {headers: headers})
+    return this.http.get(url + 'users/profile', {headers: headers})
       .map(res => res.json());
   }
 
